@@ -2,7 +2,7 @@
 Docker has a great tool for watching current CPU, memory and I/O in our containers - [docker stats](https://docs.docker.com/engine/reference/commandline/stats/). The output is streamed and we can get a quick insight of the current situation, though it's hard to see if any memory is lost over time. For that we need to store the output over a longer period of time for later analysing.
 
 # TL;DR;
-Pipe the output of `docker stats` with the flag `--no-stream` into a csv-file. Load the log files with `pandas.read_csv` and format the data to standardize the units. View an example on this github repo.
+Pipe the output of `docker stats` with the flag `--no-stream` into a csv-file. Load the log files with `pandas.read_csv` and format the data to standardize the units. View an example on [this github repo](https://github.com/Naartti/docker-stats-analyse-with-jupyter-notebook).
 
 # Logging Docker Stats
 Let's start with creating a folder to store the log files in. We don't want to pollute the root folder with csv-files now, do we?
