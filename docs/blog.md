@@ -63,7 +63,7 @@ CONTAINER ID        NAME                                           CPU %        
 cb815173b14c        nginx                0.00%               5.828MiB / 7.448GiB   0.08%               913MB / 943MB       36.9kB / 8.19kB     0
 ```
 
-Let's remove those repeading headers from the data frame.
+Let's remove those repeating headers from the data frame.
 ```python
 df = df[df.NAME != "NAME"]
 ```
@@ -110,7 +110,7 @@ df["cpu_percentage"] = percentage_to_float(df["CPU %"])
 ```
 
 ## Plotting Memory Usage
-Let's plot the memory usage and see if we have any pesky memory leaks. For the plotting, let's use [Seaborn](https://seaborn.pydata.org/). Seaborn is based on [matplotlib](https://matplotlib.org/) and makes plotting a bit easier, but still allows the customizability of matplotlib.
+Let's plot the memory usage and see if we have any pesky memory leaks. For the plotting, let's use [Seaborn](https://seaborn.pydata.org/). Seaborn is based on [matplotlib](https://matplotlib.org/) and makes plotting a bit easier, but still allows the customisability of matplotlib.
 
 First thing first; the standard size of plots are just too small - let's enlarge it a bit with `figsize`. Since docker stats doesn't log the timestamps, we might as well remove the ticks on the x-axis.
 
